@@ -119,3 +119,4 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 @utility slash { clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
 @utility hatch { background-image: repeating-linear-gradient(135deg, var(--border) 0 1px, transparent 1px 14px); }
+@keyframes scrollline { 0% { transform: translateY(-100%); } 100% { transform: translateY(200%); } }
