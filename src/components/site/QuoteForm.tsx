@@ -42,7 +42,7 @@ export function QuoteForm() {
       ["Name", "name"], ["Phone", "phone"], ["Email", "email"], ["Make", "make"], ["Model", "model"],
       ["Registration", "reg"], ["Mileage", "mileage"], ["Service", "service"], ["Preferred date", "date"], ["Info", "info"],
     ]
-      .map(([l, k]) => `${l}: ${get(k) || "-"}`)
+      .map(([l, k]) => `${l}: ${get(k!) || "-"}`)
       .join("\n");
     const subject = `Enquiry: ${get("service") || "General"} — ${get("make")} ${get("model")}`.trim();
     window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
