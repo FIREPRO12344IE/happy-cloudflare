@@ -41,9 +41,9 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="home" className="relative flex min-h-[100svh] items-end overflow-hidden">
-          <img src={hero} alt="Motorcycle on a lift in a dark workshop" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-[70%_center]" fetchPriority="high" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
+          <img src={hero} alt="Motorcycle on a lift in a workshop" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-70 mix-blend-luminosity" fetchPriority="high" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-secondary/35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/25 to-secondary/20" />
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32">
             <div className="mb-6 flex items-center gap-3 animate-fade-in">
               <span className="h-[3px] w-12 bg-primary" />
