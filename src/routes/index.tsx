@@ -41,12 +41,13 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="home" className="relative flex min-h-[100svh] items-end overflow-hidden">
-          <img src={hero} alt="Motorcycle on a lift in a workshop" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-70 mix-blend-luminosity" fetchPriority="high" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-secondary/35" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/25 to-secondary/20" />
+          <img src={hero} alt="Mechanic working on a motorcycle in the TS Workshop" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover object-[70%_center]" fetchPriority="high" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-primary/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/35 to-transparent" />
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32">
             <div className="mb-6 flex items-center gap-3 animate-fade-in">
-              <span className="h-[3px] w-12 bg-primary" />
+              <span className="h-[3px] w-12 bg-primary-foreground" />
+              <span className="h-[3px] w-4 bg-accent" />
               <span className="h-[3px] w-4 bg-accent" />
               <span className="h-[3px] w-2 bg-brand-blue" />
             </div>
@@ -64,15 +65,15 @@ function Index() {
               <a href="#quote" className="slash group inline-flex items-center justify-center gap-3 bg-primary px-9 py-5 font-display text-lg font-bold uppercase tracking-[0.18em] text-primary-foreground">
                 Get a Quote <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="#services" className="inline-flex items-center justify-center border border-foreground/40 px-9 py-5 font-display text-lg font-bold uppercase tracking-[0.18em] transition-colors hover:border-foreground hover:bg-foreground hover:text-background">
+              <a href="#services" className="inline-flex items-center justify-center border border-primary-foreground/40 px-9 py-5 font-display text-lg font-bold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:border-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 View Services
               </a>
             </div>
           </div>
           <a href="#services" aria-label="Scroll to services" className="absolute bottom-8 right-6 hidden flex-col items-center gap-3 md:flex md:right-10">
-            <span className="font-display text-xs uppercase tracking-[0.3em] text-muted-foreground [writing-mode:vertical-rl]">Scroll</span>
-            <span className="relative h-14 w-px overflow-hidden bg-border">
-              <span className="absolute inset-x-0 top-0 h-1/2 animate-[scrollline_2s_ease-in-out_infinite] bg-primary" />
+            <span className="font-display text-xs uppercase tracking-[0.3em] text-primary-foreground/70 [writing-mode:vertical-rl]">Scroll</span>
+            <span className="relative h-14 w-px overflow-hidden bg-primary-foreground/30">
+              <span className="absolute inset-x-0 top-0 h-1/2 animate-[scrollline_2s_ease-in-out_infinite] bg-primary-foreground" />
             </span>
           </a>
         </section>
