@@ -10,10 +10,10 @@ import { about, contact, pricing, reviews, services, social } from "@/content/si
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TS Workshop — Motorcycle Repairs, Servicing & Diagnostics" },
-      { name: "description", content: "TS Workshop: motorcycle servicing, repairs, tyres, electrical, engine work, MOT prep and diagnostics. Fair prices, honest work, fast turnaround." },
-      { property: "og:title", content: "TS Workshop — Motorcycle Repairs & Diagnostics" },
-      { property: "og:description", content: "Fair prices. Honest work. Fast turnaround. Get a quote from TS Workshop." },
+      { title: "TS WORKSHOP — Motorcycle Repairs, Servicing & Diagnostics" },
+      { name: "description", content: "TS WORKSHOP: motorcycle servicing, repairs, tyres, electrical, engine work, MOT prep and diagnostics. Fair prices, honest work, fast turnaround." },
+      { property: "og:title", content: "TS WORKSHOP — Motorcycle Repairs & Diagnostics" },
+      { property: "og:description", content: "Fair prices. Honest work. Fast turnaround. Get a quote from TS WORKSHOP." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -50,7 +50,7 @@ function Index() {
               <span className="h-[3px] w-4 bg-accent" />
               <span className="h-[3px] w-2 bg-brand-blue" />
             </div>
-            <h1 className="font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.85] tracking-tight animate-fade-in">
+            <h1 className="font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.85] tracking-normal animate-fade-in">
               Motorcycle
               <br />
               Repairs <span className="text-primary">&amp;</span>
@@ -92,7 +92,7 @@ function Index() {
                     <span className="absolute inset-y-0 left-0 w-0 bg-primary transition-all duration-500 group-hover:w-1" />
                     <span className="w-8 pl-3 font-display text-sm font-semibold text-primary md:w-12">{String(i + 1).padStart(2, "0")}</span>
                     <span className="flex-1">
-                      <span className="block font-display text-3xl font-bold uppercase tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">{s.name}</span>
+                      <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">{s.name}</span>
                       <span className="mt-1 block text-muted-foreground">{s.desc}</span>
                     </span>
                     <span className="hidden font-display text-xs uppercase tracking-[0.2em] text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 md:block">Get a quote</span>
@@ -110,9 +110,9 @@ function Index() {
             <Reveal>
               <SectionLabel num="02">Pricing</SectionLabel>
               <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">
-                Clear pricing.<br /><span className="text-primary">No BS.</span>
+                Clear pricing.<br /><span className="text-accent">No BS.</span>
               </h2>
-              <p className="mt-6 max-w-2xl text-lg text-muted-foreground">Prices can vary depending on the motorcycle and work required. Contact TS Workshop for an accurate quote.</p>
+              <p className="mt-6 max-w-2xl text-lg text-muted-foreground">Prices can vary depending on the motorcycle and work required. Contact TS WORKSHOP for an accurate quote.</p>
             </Reveal>
             <div className="mt-16 grid border-l border-t border-border sm:grid-cols-2 lg:grid-cols-3">
               {pricing.map((p, i) => (
@@ -138,7 +138,7 @@ function Index() {
           <Reveal className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <SectionLabel num="03">Our Work</SectionLabel>
-              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">The work<br />speaks for itself.</h2>
+              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">The work<br />speaks for <span className="text-brand-blue">itself.</span></h2>
             </div>
             <p className="max-w-xs text-muted-foreground">Workshop, customer bikes, repairs, servicing, before &amp; after and finished work.</p>
           </Reveal>
@@ -150,7 +150,7 @@ function Index() {
           <div className="pointer-events-none absolute -right-20 top-0 h-full w-1/2 -skew-x-12 bg-card" />
           <div className="relative mx-auto grid max-w-7xl gap-16 px-5 md:px-8 lg:grid-cols-2">
             <Reveal>
-              <SectionLabel num="04">Why TS Workshop</SectionLabel>
+              <SectionLabel num="04">Why TS WORKSHOP</SectionLabel>
               <p className="font-display text-6xl font-black uppercase leading-[0.88] md:text-8xl">
                 Fair prices.<br />Honest work.<br /><span className="text-primary">Fast turnaround.</span>
               </p>
@@ -180,7 +180,7 @@ function Index() {
           <div className="grid gap-12 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <SectionLabel num="05">About</SectionLabel>
-              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">About<br />TS Workshop</h2>
+              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">About<br /><span className="text-primary">TS WORKSHOP</span></h2>
             </Reveal>
             <Reveal className="lg:col-span-7" delay={100}>
               <p className={`text-xl leading-relaxed md:text-2xl ${isPlaceholder(about.story) ? "border border-dashed border-border p-6 font-display uppercase tracking-widest text-muted-foreground" : ""}`}>{about.story}</p>
@@ -209,7 +209,7 @@ function Index() {
               <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
                 {reviews.map((r) => (
                   <figure key={r.name + r.date} className="bg-card p-8">
-                    <Quote className="h-8 w-8 text-primary" />
+                    <Quote className="h-8 w-8 text-brand-blue" />
                     <blockquote className="mt-6 text-lg">{r.text}</blockquote>
                     <figcaption className="mt-8 font-display uppercase tracking-[0.15em]">{r.name} <span className="text-muted-foreground">— {r.date}</span></figcaption>
                   </figure>
@@ -226,7 +226,7 @@ function Index() {
 
         {/* QUOTE */}
         <section id="quote" className="relative scroll-mt-16 overflow-hidden py-24 md:py-36">
-          <div className="absolute inset-x-0 top-0 h-1 bg-primary" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-accent" />
           <div className="mx-auto grid max-w-7xl gap-16 px-5 md:px-8 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <SectionLabel num="07">Book / Get a Quote</SectionLabel>
@@ -285,7 +285,7 @@ function Index() {
               })}
             </dl>
             {contact.mapEmbedUrl ? (
-              <iframe title="TS Workshop location" src={contact.mapEmbedUrl} loading="lazy" className="aspect-[4/3] w-full border-0 grayscale" referrerPolicy="no-referrer-when-downgrade" />
+              <iframe title="TS WORKSHOP location" src={contact.mapEmbedUrl} loading="lazy" className="aspect-[4/3] w-full border-0 grayscale" referrerPolicy="no-referrer-when-downgrade" />
             ) : (
               <div className="hatch flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 border border-dashed border-border text-muted-foreground">
                 <MapPin className="h-8 w-8 text-primary" />
@@ -299,8 +299,8 @@ function Index() {
       {/* FOOTER */}
       <footer className="border-t border-border bg-card pb-28 pt-20 md:pb-10">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <p className="font-display text-[clamp(3.5rem,13vw,11rem)] font-black uppercase leading-[0.8] tracking-tight">
-            TS <span className="text-primary">Workshop</span>
+          <p className="font-display text-[clamp(3.5rem,13vw,11rem)] font-black uppercase leading-[0.8] tracking-normal">
+            <span className="text-primary">TS</span> WORKSHOP
           </p>
           <p className="mt-4 font-display text-lg uppercase tracking-[0.3em] text-muted-foreground">Motorcycle repairs &amp; diagnostics</p>
           <div className="mt-14 flex flex-col justify-between gap-8 border-t border-border pt-8 md:flex-row md:items-center">
@@ -316,7 +316,7 @@ function Index() {
                 )}
               </li>
             </ul>
-            <p className="text-sm text-muted-foreground">© TS Workshop {year}</p>
+            <p className="text-sm text-muted-foreground">© TS WORKSHOP {year}</p>
           </div>
         </div>
       </footer>

@@ -72,33 +72,33 @@
   --card-foreground: oklch(0.97 0 0);
   --popover: oklch(0.18 0.004 260);
   --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.87 0.18 95);
+  --primary: oklch(0.89 0.2 99);
   --primary-foreground: oklch(0.14 0.004 260);
   --secondary: oklch(0.21 0.004 260);
   --secondary-foreground: oklch(0.97 0 0);
   --muted: oklch(0.2 0.004 260);
   --muted-foreground: oklch(0.68 0.005 260);
-  --accent: oklch(0.58 0.22 27);
+  --accent: oklch(0.61 0.24 27);
   --accent-foreground: oklch(0.97 0 0);
-  --brand-blue: oklch(0.6 0.17 250);
+  --brand-blue: oklch(0.67 0.19 246);
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.97 0 0);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 18%);
-  --ring: oklch(0.87 0.18 95);
-  --chart-1: oklch(0.87 0.18 95);
-  --chart-2: oklch(0.58 0.22 27);
-  --chart-3: oklch(0.6 0.17 250);
+  --ring: oklch(0.89 0.2 99);
+  --chart-1: oklch(0.89 0.2 99);
+  --chart-2: oklch(0.61 0.24 27);
+  --chart-3: oklch(0.67 0.19 246);
   --chart-4: oklch(0.7 0 0);
   --chart-5: oklch(0.5 0 0);
   --sidebar: oklch(0.14 0.004 260);
   --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.87 0.18 95);
+  --sidebar-primary: oklch(0.89 0.2 99);
   --sidebar-primary-foreground: oklch(0.14 0.004 260);
   --sidebar-accent: oklch(0.21 0.004 260);
   --sidebar-accent-foreground: oklch(0.97 0 0);
   --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.87 0.18 95);
+  --sidebar-ring: oklch(0.89 0.2 99);
 }
 
 @layer base {
@@ -113,7 +113,8 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-sans); font-variation-settings: "wght" 450; -webkit-font-smoothing: antialiased; }
+.font-display { font-stretch: condensed; font-variation-settings: "wght" 800; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
