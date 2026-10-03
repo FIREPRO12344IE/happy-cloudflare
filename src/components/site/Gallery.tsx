@@ -24,8 +24,7 @@ export function Gallery() {
   });
 
   const Tile = ({ i, className }: { i: number; className: string }) => {
-    const g = gallery[i];
-    if (!g) return null;
+    const g = gallery[i]!;
     return (
       <button onClick={() => setIdx(i)} className={`group relative overflow-hidden bg-card text-left ${className}`} aria-label={`Open ${g.caption}`}>
         {g.src ? (
@@ -72,15 +71,10 @@ export function Gallery() {
           aria-modal="true"
           aria-label="Image viewer"
           className="fixed inset-0 z-[60] flex items-center justify-center bg-background/97 animate-fade-in"
-          onTouchStart={(e) => {
-            const touch = e.touches[0];
-            if (touch) touchX.current = touch.clientX;
-          }}
+          onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
           onTouchEnd={(e) => {
             if (touchX.current === null) return;
-            const touch = e.changedTouches[0];
-            if (!touch) return;
-            const dx = touch.clientX - touchX.current;
+            const dx = e.changedTouches[0].clientX - touchX.current;
             if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
             touchX.current = null;
           }}
@@ -92,8 +86,8 @@ export function Gallery() {
             <ChevronLeft className="h-10 w-10" />
           </button>
           <figure key={idx} className="w-[86vw] max-w-5xl animate-scale-in">
-            {gallery[idx].src ? (
-              <img src={gallery[idx].src} alt={gallery[idx].caption} className="max-h-[78vh] w-full object-contain" />
+            {gallery[idx]!.src ? (
+              <img src={gallery[idx]!.src} alt={gallery[idx]!.caption} className="max-h-[78vh] w-full object-contain" />
             ) : (
               <div className="hatch flex aspect-video w-full flex-col items-center justify-center gap-3 border border-dashed border-border text-muted-foreground">
                 <ImagePlus className="h-10 w-10" />
@@ -101,7 +95,7 @@ export function Gallery() {
               </div>
             )}
             <figcaption className="mt-4 flex justify-between font-display text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              <span>{gallery[idx].caption}</span>
+              <span>{gallery[idx]!.caption}</span>
               <span className="text-primary">
                 {idx + 1} / {n}
               </span>
