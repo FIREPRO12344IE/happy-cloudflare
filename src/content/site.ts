@@ -56,4 +56,23 @@ export const about = {
 };
 
 // Add genuine reviews only.
-export const reviews: { name: string; date: string; text: string }[] = [];
+export const reviews: { name: string; date: string; text: string; reply?: string }[] = [
+  {
+    name: "Kurt",
+    date: "4 weeks ago",
+    text: "Amazing guys drove 5 hours to deliver a bike to me, over the moon with it. No lies, no hassle, exactly what you would want when buying a bike. Very professional — would recommend any day of the week.",
+    reply: "We Deliver Anywhere In The UK 🚚 Glad You're Happy 😃",
+  },
+  {
+    name: "Nathan",
+    date: "A month ago",
+    text: "Really happy with T's Workshop. Had my spark plugs changed and it was all sorted the same day with no problems at all. The bike is running perfectly now. Really good price as well, so can't complain. Would definitely recommend them and I'll be using them again!",
+    reply: "Nice one mate! I'll Always Charge Accordingly💪🏼",
+  },
+  {
+    name: "Justin Torcato",
+    date: "A month ago",
+    text: "Kept me updated, sorted my bike out.",
+    reply: "Always a pleasure working on the Z750 mate!",
+  },
+];
