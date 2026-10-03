@@ -6,8 +6,8 @@
 
 export const contact = {
   address: "[ADD ADDRESS]",
-  phone: "[ADD PHONE]", // e.g. "07123 456789"
-  email: "", // e.g. "hello@tsworkshop.co.uk" — the quote form sends to this
+  phone: "07378 442618", // tap-to-call buttons across the site use this
+  email: "tsworkshopp@gmail.com", // the quote form sends enquiries here
   hours: "[ADD OPENING HOURS]",
   mapEmbedUrl: "", // Google Maps embed URL once address is confirmed
 };
