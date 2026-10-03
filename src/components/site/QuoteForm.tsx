@@ -42,7 +42,7 @@ export function QuoteForm() {
       ["Name", "name"], ["Phone", "phone"], ["Email", "email"], ["Make", "make"], ["Model", "model"],
       ["Registration", "reg"], ["Mileage", "mileage"], ["Service", "service"], ["Preferred date", "date"], ["Info", "info"],
     ]
-      .map(([l, k]) => `${l}: ${get(k!) || "-"}`)
+      .map(([l, k]) => `${l}: ${get(k ?? "") || "-"}`)
       .join("\n");
     const subject = `Enquiry: ${get("service") || "General"} — ${get("make")} ${get("model")}`.trim();
     window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -78,11 +78,11 @@ export function QuoteForm() {
         </button>
         {social.instagramUrl ? (
           <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-foreground/30 px-6 py-5 font-display font-bold uppercase tracking-[0.15em] hover:border-primary hover:text-primary">
-            <MessageSquare className="h-5 w-5" /> Message TS Workshop
+            <MessageSquare className="h-5 w-5" /> Message TS WORKSHOP
           </a>
         ) : hasPhone ? (
           <a href={`sms:${contact.phone.replace(/\s/g, "")}`} className="flex items-center justify-center gap-2 border border-foreground/30 px-6 py-5 font-display font-bold uppercase tracking-[0.15em] hover:border-primary hover:text-primary">
-            <MessageSquare className="h-5 w-5" /> Message TS Workshop
+            <MessageSquare className="h-5 w-5" /> Message TS WORKSHOP
           </a>
         ) : (
           <span className="flex items-center justify-center gap-2 border border-dashed border-border px-6 py-5 font-display uppercase tracking-[0.15em] text-muted-foreground" title="Add phone or Instagram URL in site content">
