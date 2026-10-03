@@ -211,6 +211,12 @@ function Index() {
                   <figure key={r.name + r.date} className="bg-card p-8">
                     <Quote className="h-8 w-8 text-brand-blue" />
                     <blockquote className="mt-6 text-lg">{r.text}</blockquote>
+                    {r.reply && (
+                      <div className="mt-5 border-l-2 border-brand-blue pl-4 text-sm text-muted-foreground">
+                        <span className="font-display font-bold uppercase tracking-[0.15em] text-foreground">TS WORKSHOP</span>
+                        <span className="mx-2">—</span>{r.reply}
+                      </div>
+                    )}
                     <figcaption className="mt-8 font-display uppercase tracking-[0.15em]">{r.name} <span className="text-muted-foreground">— {r.date}</span></figcaption>
                   </figure>
                 ))}
