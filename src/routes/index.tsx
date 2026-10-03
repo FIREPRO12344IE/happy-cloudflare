@@ -176,7 +176,8 @@ function Index() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
+        <section id="about" className="relative mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
+          <div className="absolute inset-x-0 top-0 h-1 bg-accent" />
           <div className="grid gap-12 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <SectionLabel num="05">About</SectionLabel>
