@@ -140,7 +140,7 @@ function Index() {
               <SectionLabel num="03">Our Work</SectionLabel>
               <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">The work<br />speaks for <span className="text-brand-blue">itself.</span></h2>
             </div>
-            <p className="max-w-xs text-muted-foreground">Workshop, customer bikes, repairs, servicing, before &amp; after and finished work.</p>
+            <p className="max-w-xs text-muted-foreground">Engine work, repairs, customer bikes and finished work.</p>
           </Reveal>
           <Reveal><Gallery /></Reveal>
         </section>
