@@ -4,12 +4,12 @@
 // to hide it on the website.
 // ============================================================
 
-import engineSwapsImg from "@/assets/engine-swaps.png.asset.json";
-import engineWorkImg from "@/assets/engine-work.png.asset.json";
-import ecuBarrelImg from "@/assets/ecu-barrel.png.asset.json";
-import scooterRepairImg from "@/assets/scooter-repair.png.asset.json";
-import pitBikeImg from "@/assets/pit-bike.png.asset.json";
-import kawasakiNightImg from "@/assets/kawasaki-night.png.asset.json";
+import engineSwapsImg from "@/assets/engine-swaps.png";
+import engineWorkImg from "@/assets/engine-work.png";
+import ecuBarrelImg from "@/assets/ecu-barrel.png";
+import scooterRepairImg from "@/assets/scooter-repair.png";
+import pitBikeImg from "@/assets/pit-bike.png";
+import kawasakiNightImg from "@/assets/kawasaki-night.png";
 
 export const contact = {
   address: "Gainsborough", // full street address can replace this
@@ -48,12 +48,12 @@ export const pricing = [
 
 // Add real photos: set `src` to an image URL. Empty src shows a placeholder.
 export const gallery: { src: string; category: string; caption: string }[] = [
-  { src: engineSwapsImg.url, category: "Engine Work", caption: "Engine swaps & repairs" },
-  { src: engineWorkImg.url, category: "Engine Work", caption: "Engine work 🔧" },
-  { src: ecuBarrelImg.url, category: "Repairs", caption: "ECU & barrel replacement 💰" },
-  { src: scooterRepairImg.url, category: "Customer Bikes", caption: "Scooter back on the road" },
-  { src: pitBikeImg.url, category: "Customer Bikes", caption: "Electric pit bike" },
-  { src: kawasakiNightImg.url, category: "Finished Work", caption: "Ready for the road" },
+  { src: engineSwapsImg, category: "Engine Work", caption: "Engine swaps & repairs" },
+  { src: engineWorkImg, category: "Engine Work", caption: "Engine work 🔧" },
+  { src: ecuBarrelImg, category: "Repairs", caption: "ECU & barrel replacement 💰" },
+  { src: scooterRepairImg, category: "Customer Bikes", caption: "Scooter back on the road" },
+  { src: pitBikeImg, category: "Customer Bikes", caption: "Electric pit bike" },
+  { src: kawasakiNightImg, category: "Finished Work", caption: "Ready for the road" },
 ];
 
 export const about = {
