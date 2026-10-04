@@ -261,15 +261,23 @@ function Index() {
               <p className="font-display text-sm font-bold uppercase tracking-[0.3em]">Follow the work</p>
               <p className="mt-4 break-all font-display text-[clamp(3rem,10vw,8rem)] font-black uppercase leading-none tracking-tight">{social.handle}</p>
             </div>
-            {social.instagramUrl ? (
-              <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-primary-foreground px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] text-primary">
-                <Instagram className="h-5 w-5" /> Follow on Instagram
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] opacity-70">
-                <Instagram className="h-5 w-5" /> Profile link coming soon
-              </span>
-            )}
+            <div className="flex flex-wrap gap-4">
+              {social.instagramUrl && (
+                <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-primary-foreground px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] text-primary">
+                  <Instagram className="h-5 w-5" /> Instagram
+                </a>
+              )}
+              {social.snapchatUrl && (
+                <a href={social.snapchatUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] text-primary-foreground transition-colors hover:border-primary-foreground">
+                  <Ghost className="h-5 w-5" /> Snapchat
+                </a>
+              )}
+              {!social.instagramUrl && !social.snapchatUrl && (
+                <span className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] opacity-70">
+                  <Instagram className="h-5 w-5" /> Profile link coming soon
+                </span>
+              )}
+            </div>
           </div>
         </section>
 
@@ -300,10 +308,18 @@ function Index() {
             </dl>
             {contact.mapEmbedUrl ? (
               <iframe title="TS WORKSHOP location" src={contact.mapEmbedUrl} loading="lazy" className="aspect-[4/3] w-full border-0 grayscale" referrerPolicy="no-referrer-when-downgrade" />
-            ) : (
-              <div className="hatch flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 border border-dashed border-border text-muted-foreground">
+            ) : contact.googleMapsUrl ? (
+              <div className="hatch flex aspect-[4/3] w-full flex-col items-center justify-center gap-6 border border-border p-8 text-center">
                 <MapPin className="h-8 w-8 text-primary" />
-                <span className="font-display uppercase tracking-widest">Map added once address is confirmed</span>
+                <p className="font-display uppercase tracking-widest">Find us on Google Maps</p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href={contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-primary px-6 py-4 font-display font-bold uppercase tracking-[0.15em] text-primary-foreground transition-colors hover:bg-foreground">
+                    <MapPin className="h-5 w-5" /> Open in Maps
+                  </a>
+                  <a href={contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border border-foreground/30 px-6 py-4 font-display font-bold uppercase tracking-[0.15em] transition-colors hover:border-accent hover:text-accent">
+                    <Star className="h-5 w-5" /> Google Reviews
+                  </a>
+                </div>
               </div>
             )}
           </div>
