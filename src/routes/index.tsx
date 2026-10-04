@@ -321,7 +321,7 @@ function Index() {
                   </a>
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
         </section>
       </main>
