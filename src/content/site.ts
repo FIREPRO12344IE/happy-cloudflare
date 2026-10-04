@@ -4,17 +4,26 @@
 // to hide it on the website.
 // ============================================================
 
+import engineSwapsImg from "@/assets/engine-swaps.png.asset.json";
+import engineWorkImg from "@/assets/engine-work.png.asset.json";
+import ecuBarrelImg from "@/assets/ecu-barrel.png.asset.json";
+import scooterRepairImg from "@/assets/scooter-repair.png.asset.json";
+import pitBikeImg from "@/assets/pit-bike.png.asset.json";
+import kawasakiNightImg from "@/assets/kawasaki-night.png.asset.json";
+
 export const contact = {
   address: "[ADD ADDRESS]",
   phone: "07378 442618", // tap-to-call buttons across the site use this
   email: "tsworkshopp@gmail.com", // the quote form sends enquiries here
   hours: "[ADD OPENING HOURS]",
   mapEmbedUrl: "", // Google Maps embed URL once address is confirmed
+  googleMapsUrl: "https://maps.app.goo.gl/uhHBphtJNfm8Ae9K7", // Google Maps listing + reviews
 };
 
 export const social = {
   handle: "@tsworkshop",
   instagramUrl: "", // add real profile URL, e.g. "https://instagram.com/..."
+  snapchatUrl: "https://www.snapchat.com/add/tsworkshop?share_id=YF-ZRerW-Ww&locale=en-GB",
 };
 
 export const services = [
@@ -39,12 +48,12 @@ export const pricing = [
 
 // Add real photos: set `src` to an image URL. Empty src shows a placeholder.
 export const gallery: { src: string; category: string; caption: string }[] = [
-  { src: "", category: "Workshop", caption: "Workshop photo" },
-  { src: "", category: "Customer Bikes", caption: "Customer motorcycle" },
-  { src: "", category: "Repairs", caption: "Repair in progress" },
-  { src: "", category: "Servicing", caption: "Service work" },
-  { src: "", category: "Before & After", caption: "Before & after" },
-  { src: "", category: "Finished Work", caption: "Finished work" },
+  { src: engineSwapsImg.url, category: "Engine Work", caption: "Engine swaps & repairs" },
+  { src: engineWorkImg.url, category: "Engine Work", caption: "Engine work 🔧" },
+  { src: ecuBarrelImg.url, category: "Repairs", caption: "ECU & barrel replacement 💰" },
+  { src: scooterRepairImg.url, category: "Customer Bikes", caption: "Scooter back on the road" },
+  { src: pitBikeImg.url, category: "Customer Bikes", caption: "Electric pit bike" },
+  { src: kawasakiNightImg.url, category: "Finished Work", caption: "Ready for the road" },
 ];
 
 export const about = {

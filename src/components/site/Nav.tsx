@@ -32,7 +32,7 @@ export function Nav() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8" aria-label="Main">
         <a href="#home" className="flex items-center gap-2 font-display text-2xl font-black uppercase tracking-normal">
           <span className="slash bg-primary px-2 text-primary-foreground ring-1 ring-accent">TS</span>
-          <span className="border-b-2 border-brand-blue">WORKSHOP</span>
+          <span className="border-t-2 border-accent">WORKSHOP</span>
         </a>
         <ul className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
