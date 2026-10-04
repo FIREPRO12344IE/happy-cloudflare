@@ -12,11 +12,11 @@ import pitBikeImg from "@/assets/pit-bike.png.asset.json";
 import kawasakiNightImg from "@/assets/kawasaki-night.png.asset.json";
 
 export const contact = {
-  address: "[ADD ADDRESS]",
+  address: "Gainsborough", // full street address can replace this
   phone: "07378 442618", // tap-to-call buttons across the site use this
   email: "tsworkshopp@gmail.com", // the quote form sends enquiries here
-  hours: "[ADD OPENING HOURS]",
-  mapEmbedUrl: "", // Google Maps embed URL once address is confirmed
+  hours: "8am – 10pm",
+  mapEmbedUrl: "https://maps.google.com/maps?q=Gainsborough,+Lincolnshire&output=embed", // replace with exact address pin when confirmed
   googleMapsUrl: "https://maps.app.goo.gl/uhHBphtJNfm8Ae9K7", // Google Maps listing + reviews
 };
 
@@ -57,7 +57,7 @@ export const gallery: { src: string; category: string; caption: string }[] = [
 ];
 
 export const about = {
-  story: "[OWNER: ADD COMPANY STORY HERE]",
+  story: "TS WORKSHOP is built on one man's drive. A motivated, inspired owner with a dream of making it big — every bike that rolls into the workshop gets that same commitment: honest work, fair prices and a real passion for motorcycles.",
   team: "", // owner / team info
   experience: "",
   qualifications: "",
