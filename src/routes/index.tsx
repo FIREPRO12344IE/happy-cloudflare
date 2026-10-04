@@ -341,6 +341,8 @@ function Index() {
               <li>
                 {social.instagramUrl ? (
                   <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="font-display text-sm uppercase tracking-[0.2em] hover:text-primary">Socials</a>
+                ) : social.snapchatUrl ? (
+                  <a href={social.snapchatUrl} target="_blank" rel="noopener noreferrer" className="font-display text-sm uppercase tracking-[0.2em] hover:text-primary">Snapchat</a>
                 ) : (
                   <span className="font-display text-sm uppercase tracking-[0.2em] text-muted-foreground">{social.handle}</span>
                 )}
