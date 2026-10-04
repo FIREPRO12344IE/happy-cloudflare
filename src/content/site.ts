@@ -57,7 +57,7 @@ export const gallery: { src: string; category: string; caption: string }[] = [
 ];
 
 export const about = {
-  story: "[OWNER: ADD COMPANY STORY HERE]",
+  story: "TS WORKSHOP is built on one man's drive. A motivated, inspired owner with a dream of making it big — every bike that rolls into the workshop gets that same commitment: honest work, fair prices and a real passion for motorcycles.",
   team: "", // owner / team info
   experience: "",
   qualifications: "",
