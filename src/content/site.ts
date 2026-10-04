@@ -12,11 +12,11 @@ import pitBikeImg from "@/assets/pit-bike.png.asset.json";
 import kawasakiNightImg from "@/assets/kawasaki-night.png.asset.json";
 
 export const contact = {
-  address: "[ADD ADDRESS]",
+  address: "Gainsborough", // full street address can replace this
   phone: "07378 442618", // tap-to-call buttons across the site use this
   email: "tsworkshopp@gmail.com", // the quote form sends enquiries here
-  hours: "[ADD OPENING HOURS]",
-  mapEmbedUrl: "", // Google Maps embed URL once address is confirmed
+  hours: "8am – 10pm",
+  mapEmbedUrl: "https://maps.google.com/maps?q=Gainsborough&output=embed", // replace with exact address pin when confirmed
   googleMapsUrl: "https://maps.app.goo.gl/uhHBphtJNfm8Ae9K7", // Google Maps listing + reviews
 };
 
