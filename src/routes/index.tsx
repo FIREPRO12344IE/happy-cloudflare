@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Instagram, MapPin, Phone, Mail, Clock, Quote } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Ghost, Instagram, MapPin, Phone, Mail, Clock, Quote, Star } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { Nav, links } from "@/components/site/Nav";
 import { Gallery } from "@/components/site/Gallery";
@@ -227,6 +227,13 @@ function Index() {
                 <p className="max-w-xl text-lg text-muted-foreground">Genuine customer reviews will appear here. Been in recently? We'd appreciate your feedback.</p>
                 <a href="#contact" className="font-display font-bold uppercase tracking-[0.15em] text-primary">Get in touch →</a>
               </div>
+            )}
+            {contact.googleMapsUrl && (
+              <Reveal className="mt-10">
+                <a href={contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border border-foreground/30 px-8 py-5 font-display font-bold uppercase tracking-[0.15em] transition-colors hover:border-accent hover:text-accent">
+                  <Star className="h-5 w-5" /> See us on Google
+                </a>
+              </Reveal>
             )}
           </div>
         </section>
