@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight, Ghost, Instagram, MapPin, Phone, Mail, Clock, Quote, Star } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { Nav, links } from "@/components/site/Nav";
@@ -147,6 +148,11 @@ function Index() {
             <p className="max-w-xs text-muted-foreground">Engine work, repairs, customer bikes and finished work.</p>
           </Reveal>
           <Reveal><Gallery /></Reveal>
+          <div className="mt-10 flex justify-end">
+            <Button asChild className="h-auto max-w-full whitespace-normal rounded-none px-7 py-5 text-center font-display text-lg font-bold uppercase tracking-normal shadow-none">
+              <Link to="/more-info">More info and pictures <ArrowUpRight className="h-5 w-5" /></Link>
+            </Button>
+          </div>
         </section>
 
         {/* WHY */}
