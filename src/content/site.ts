@@ -112,3 +112,43 @@ export const reviews: { name: string; date: string; text: string; reply?: string
     reply: "Always a pleasure working on the Z750 mate!",
   },
 ];
+
+// Owner-supplied workshop story; future plans are ambitions, not current services.
+export const workshopStory = [
+  {
+    "title": "HOW IT STARTED",
+    "paragraphs": [
+      "TS WORKSHOP began with a motorcycle accident, a broken wrist and a determination to stay connected to something I loved.",
+      "Unable to ride or return to work while recovering, I bought a non-running moped and set about bringing it back to life. With my injured wrist too sensitive to work in the cold, those first repairs happened inside my house. Before long, the moped was running—and I had found a new direction.",
+      "One project led to another. I began buying, repairing and selling more motorcycles and mopeds, developing my skills with every fault I traced and every bike I brought back onto the road. What started as a way to keep busy during recovery revealed an ability for mechanical problem-solving and a passion that went beyond riding."
+    ],
+    "photo": "Photo to be added"
+  },
+  {
+    "title": "WHY TS WORKSHOP EXISTS",
+    "paragraphs": [
+      "At first, repairing bikes helped me stay involved with motorcycles and earn a modest income while I couldn’t do my usual job. It soon became something much more meaningful: the opportunity to build an independent business around work I cared about.",
+      "TS WORKSHOP grew from that experience. Today, it’s an independent motorcycle and electric vehicle workshop in Gainsborough, built around practical problem-solving, personal service and the satisfaction of getting customers moving again.",
+      "Whether it’s routine maintenance, a persistent electrical fault or an engine rebuild, I bring the same curiosity and determination that got that first moped running."
+    ],
+    "photo": "Photo to be added"
+  },
+  {
+    "title": "HOW I WORK",
+    "paragraphs": [
+      "My approach is straightforward: investigate thoroughly, communicate clearly and keep each job moving. I aim to get repairs completed efficiently, with same-day turnaround wherever the work and parts availability allow, while giving every job the attention it needs.",
+      "I believe customers should understand what’s happening with their bike. That means explaining what I find, discussing the work needed and keeping them involved through updates, photos and videos along the way.",
+      "Customer satisfaction is at the heart of TS WORKSHOP. An independent workshop depends on trust, repeat customers and recommendations. I want people to feel confident leaving their bike with me—and confident coming back whenever they need help."
+    ],
+    "photo": "Photo to be added"
+  },
+  {
+    "title": "WHAT I’M BUILDING TOWARDS",
+    "paragraphs": [
+      "My ambition is to build TS WORKSHOP into an established, trusted business with a strong reputation for its workmanship and the way it treats people.",
+      "Longer term, I’d like to explore additional workshops and self-service spaces where riders can hire a bay and tools to work on their own bikes. Making workshop space and equipment more accessible is an idea I’d love to develop as the business grows.",
+      "For now, my focus is right here: improving the current workshop, investing in equipment, developing my skills and refining how each job is handled. Every step has the same purpose—to give customers a service they can rely on and help keep them on the road."
+    ],
+    "photo": "Photo to be added"
+  }
+];
