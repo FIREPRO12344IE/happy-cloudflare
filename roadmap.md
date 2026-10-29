@@ -4,4 +4,4 @@
 - [x] Add the supplied four-part workshop story and photo placeholders, using TS WORKSHOP consistently.
 - [x] Verify page navigation, story, placeholders and existing gallery on desktop and mobile.
 - [x] Adjust the opening photo crop and phone text layout without changing section order.
-- [ ] Verify all bundled photos, phone navigation and gallery viewing on narrow and larger screens.
+- [x] Verify all bundled photos, phone navigation and gallery viewing at 320px, 390px, 430px and desktop; all images load, no horizontal overflow, routing tests and build pass.
