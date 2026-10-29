@@ -10,6 +10,16 @@ import ecuBarrelImg from "@/assets/ecu-barrel.png";
 import scooterRepairImg from "@/assets/scooter-repair.png";
 import pitBikeImg from "@/assets/pit-bike.png";
 import kawasakiNightImg from "@/assets/kawasaki-night.png";
+import work7Img from "@/assets/work/work-7.jpeg";
+import work8Img from "@/assets/work/work-8.jpeg";
+import work9Img from "@/assets/work/work-9.jpeg";
+import work10Img from "@/assets/work/work-10.jpeg";
+import work2Img from "@/assets/work/work-2.jpeg";
+import work3Img from "@/assets/work/work-3.jpeg";
+import work4Img from "@/assets/work/work-4.jpeg";
+import work5Img from "@/assets/work/work-5.jpeg";
+import work1Img from "@/assets/work/work-1.jpeg";
+import work6Img from "@/assets/work/work-6.jpeg";
 
 export const contact = {
   address: "Gainsborough", // full street address can replace this
@@ -55,6 +65,16 @@ export const pricingNote =
 
 // Add real photos: set `src` to an image URL. Empty src shows a placeholder.
 export const gallery: { src: string; category: string; caption: string }[] = [
+  { src: work7Img, category: "Customer Bikes", caption: "Hi-Performance Bikes" },
+  { src: work8Img, category: "Diagnostics", caption: "No Start Diagnosis" },
+  { src: work9Img, category: "Diagnostics", caption: "iCarsoft MTV6+" },
+  { src: work10Img, category: "Customer Bikes", caption: "We Get You Back On The Road In No Time" },
+  { src: work2Img, category: "Repairs", caption: "Clutch Work" },
+  { src: work3Img, category: "E-Vehicles", caption: "E-Bike Repairs" },
+  { src: work4Img, category: "Rebuilds", caption: "YZF-R Caliper Rebuild" },
+  { src: work5Img, category: "Tyres", caption: "Harley Fatbob Tyres" },
+  { src: work1Img, category: "Rebuilds", caption: "Husky TE 300i Rebuild" },
+  { src: work6Img, category: "Servicing", caption: "Aprilia SXR50 Service" },
   { src: engineSwapsImg, category: "Engine Work", caption: "Engine swaps & repairs" },
   { src: engineWorkImg, category: "Engine Work", caption: "Engine work 🔧" },
   { src: ecuBarrelImg, category: "Repairs", caption: "ECU & barrel replacement 💰" },
