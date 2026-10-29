@@ -9,5 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Site is a single static-friendly landing page; all editable business content lives in `src/content/site.ts` (why: owner edits one file, no backend needed for Cloudflare deploy).
+- Site uses static-friendly file routes for the main landing page and additional workshop information; all editable business content lives in `src/content/site.ts` (why: owner edits one file, no backend needed for Cloudflare deploy).
 - Quote form uses mailto, no server secrets (why: works on any static/edge host without configuration).
