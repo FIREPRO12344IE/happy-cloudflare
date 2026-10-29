@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, ImagePlus, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { gallery } from "@/content/site";
 
 export function Gallery() {
@@ -27,7 +29,7 @@ export function Gallery() {
     const g = gallery[i];
     if (!g) return null;
     return (
-      <button onClick={() => setIdx(i)} className={`group relative overflow-hidden bg-card text-left ${className}`} aria-label={`Open ${g.caption}`}>
+      <Button variant="ghost" onClick={() => setIdx(i)} className={`group relative block h-auto overflow-hidden rounded-none bg-card p-0 text-left hover:bg-card ${className}`} aria-label={`Open ${g.caption}`}>
         {g.src ? (
           <img src={g.src} alt={g.caption} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         ) : (
@@ -39,7 +41,7 @@ export function Gallery() {
         <span className="absolute bottom-0 left-0 bg-background/90 px-3 py-1.5 font-display text-xs font-semibold uppercase tracking-[0.2em]">
           <span className="text-primary">{String(i + 1).padStart(2, "0")}</span> {g.category}
         </span>
-      </button>
+      </Button>
     );
   };
 
@@ -66,7 +68,7 @@ export function Gallery() {
         ))}
       </div>
 
-      {idx !== null && gallery[idx] && (
+      {idx !== null && gallery[idx] && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -85,12 +87,12 @@ export function Gallery() {
             touchX.current = null;
           }}
         >
-          <button className="absolute right-4 top-4 p-3" onClick={() => setIdx(null)} aria-label="Close">
+          <Button variant="ghost" size="icon" className="absolute right-4 top-4 h-12 w-12 rounded-none" onClick={() => setIdx(null)} aria-label="Close">
             <X className="h-8 w-8" />
-          </button>
-          <button className="absolute left-2 p-3 md:left-6" onClick={() => go(-1)} aria-label="Previous">
+          </Button>
+          <Button variant="ghost" size="icon" className="absolute left-0 z-10 h-12 w-10 rounded-none bg-background/70 md:left-6" onClick={() => go(-1)} aria-label="Previous">
             <ChevronLeft className="h-10 w-10" />
-          </button>
+          </Button>
           <figure key={idx} className="w-[86vw] max-w-5xl animate-scale-in">
             {gallery[idx]?.src ? (
               <img src={gallery[idx]?.src} alt={gallery[idx]?.caption} className="max-h-[78vh] w-full object-contain" />
@@ -100,17 +102,17 @@ export function Gallery() {
                 <span className="font-display uppercase tracking-widest">Owner photo goes here</span>
               </div>
             )}
-            <figcaption className="mt-4 flex justify-between font-display text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              <span>{gallery[idx]?.caption}</span>
-              <span className="text-primary">
+            <figcaption className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] gap-4 font-display text-sm uppercase tracking-normal text-muted-foreground">
+              <span className="min-w-0">{gallery[idx]?.caption}</span>
+              <span className="shrink-0 text-primary">
                 {idx + 1} / {n}
               </span>
             </figcaption>
           </figure>
-          <button className="absolute right-2 p-3 md:right-6" onClick={() => go(1)} aria-label="Next">
+          <Button variant="ghost" size="icon" className="absolute right-0 z-10 h-12 w-10 rounded-none bg-background/70 md:right-6" onClick={() => go(1)} aria-label="Next">
             <ChevronRight className="h-10 w-10" />
-          </button>
-        </div>
+          </Button>
+        </div>, document.body
       )}
     </>
   );

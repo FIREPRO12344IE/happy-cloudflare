@@ -11,3 +11,5 @@
 
 - Site uses static-friendly file routes for the main landing page and additional workshop information; all editable business content lives in `src/content/site.ts` (why: owner edits one file, no backend needed for Cloudflare deploy).
 - Quote form uses mailto, no server secrets (why: works on any static/edge host without configuration).
+- Website photos must be real files imported from local assets, never Lovable-only asset URLs (why: images must remain available on standalone Cloudflare deployments).
+- Render the full-screen gallery viewer into document.body via a portal (why: animated section transforms otherwise trap the viewer inside the page layout).

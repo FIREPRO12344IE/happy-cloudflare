@@ -41,17 +41,17 @@ function Index() {
       <Nav />
       <main>
         {/* HERO */}
-        <section id="home" className="relative flex min-h-[100svh] items-end overflow-hidden">
-          <img src={hero} alt="Motorcycle on a lift in a dark workshop" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-[70%_center]" fetchPriority="high" />
+        <section id="home" className="relative flex min-h-[calc(100svh-5rem)] items-end overflow-hidden md:min-h-[calc(100svh-2rem)]">
+          <img src={hero} alt="Motorcycle on a lift in a dark workshop" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-[68%_center] sm:object-[65%_center] lg:object-center" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
-          <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32">
+          <div className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-44 md:px-8 md:pb-24 md:pt-32">
             <div className="mb-6 flex items-center gap-3 animate-fade-in">
               <span className="h-[3px] w-12 bg-primary" />
               <span className="h-[3px] w-4 bg-brand-blue" />
               <span className="h-[3px] w-2 bg-accent" />
             </div>
-            <h1 className="font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.85] tracking-normal animate-fade-in">
+            <h1 className="font-display text-[3.2rem] font-black uppercase leading-[0.9] tracking-normal animate-fade-in sm:text-7xl lg:text-8xl xl:text-[9.5rem]">
               Motorcycle
               <br />
               Repairs <span className="text-primary">&amp;</span>
@@ -89,13 +89,13 @@ function Index() {
             <ul className="border-t border-border lg:col-span-8">
               {services.map((s, i) => (
                 <li key={s.name}>
-                  <a href="#quote" onClick={() => pickService(s.name)} className="group relative flex items-center gap-5 border-b border-border py-7 transition-colors md:gap-10 md:py-9">
+                  <a href="#quote" onClick={() => pickService(s.name)} className="group relative grid grid-cols-[2rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-border py-7 transition-colors md:flex md:gap-10 md:py-9">
                     <span className="absolute inset-y-0 left-0 w-0 bg-primary transition-all duration-500 group-hover:w-1" />
                     <span className="w-8 pl-3 font-display text-sm font-semibold text-primary md:w-12">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="flex-1">
+                    <span className="min-w-0 flex-1">
                       <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">
                         {s.name}
-                        <span className="ml-3 whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.15em] text-primary md:text-xl">— {s.price}</span>
+                        <span className="mt-2 block whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.15em] text-primary md:ml-3 md:mt-0 md:inline md:text-xl">— {s.price}</span>
                       </span>
                       <span className="mt-1 block text-muted-foreground">{s.desc}</span>
                     </span>
@@ -309,7 +309,7 @@ function Index() {
                 return (
                   <div key={k as string} className="bg-background p-7">
                     <dt className="flex items-center gap-2 font-display text-sm uppercase tracking-[0.2em] text-primary"><I className="h-4 w-4" />{k as string}</dt>
-                    <dd className={`mt-3 whitespace-pre-line text-lg ${isPlaceholder(v as string) ? "text-muted-foreground" : ""}`}>
+                    <dd className={`mt-3 break-words whitespace-pre-line text-lg ${isPlaceholder(v as string) ? "text-muted-foreground" : ""}`}>
                       {href ? <a href={href as string} className="hover:text-primary">{v as string}</a> : (v as string)}
                     </dd>
                   </div>
@@ -364,7 +364,7 @@ function Index() {
       </footer>
 
       {/* Mobile action bar */}
-      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-border bg-background md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-border bg-background pb-[env(safe-area-inset-bottom)] md:hidden">
         {phoneOk ? (
           <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="flex items-center justify-center gap-2 py-4 font-display font-bold uppercase tracking-widest"><Phone className="h-4 w-4" /> Call</a>
         ) : (
