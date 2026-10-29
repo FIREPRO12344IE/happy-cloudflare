@@ -5,6 +5,13 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 
+// The real document shell mounts <html>; jsdom's render container is a <div>.
+vi.mock("@/routes/__root", async (importOriginal) => {
+  const original = await importOriginal<typeof import("@/routes/__root")>();
+  original.Route.update({ shellComponent: ({ children }) => children });
+  return original;
+});
+
 function renderAt(path: string) {
   const queryClient = new QueryClient();
   const router = createRouter({
@@ -34,6 +41,11 @@ describe("App routing", () => {
 
     const { container } = renderAt("/this-route-does-not-exist");
 
+    await waitFor(() => expect(container.firstChild).not.toBeNull());
+  });
+
+  it("renders the additional information route", async () => {
+    const { container } = renderAt("/more-info");
     await waitFor(() => expect(container.firstChild).not.toBeNull());
   });
 });
