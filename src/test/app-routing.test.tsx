@@ -8,7 +8,7 @@ import { routeTree } from "@/routeTree.gen";
 // The real document shell mounts <html>; jsdom's render container is a <div>.
 vi.mock("@/routes/__root", async (importOriginal) => {
   const original = await importOriginal<typeof import("@/routes/__root")>();
-  original.Route.update({ shellComponent: ({ children }) => children });
+  original.Route.options.shellComponent = ({ children }) => children;
   return original;
 });
 
