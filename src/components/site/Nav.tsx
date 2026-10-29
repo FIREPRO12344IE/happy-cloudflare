@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const links = [
   { href: "#home", label: "Home" },
@@ -20,16 +21,18 @@ export function Nav() {
     return () => window.removeEventListener("scroll", on);
   }, []);
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = previousOverflow; };
   }, [open]);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "border-b border-border bg-background/95 py-3 backdrop-blur" : "py-5 md:py-7"
+        scrolled ? "border-b border-border bg-background/95 py-3" : "py-5 md:py-7"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8" aria-label="Main">
+      <nav className="relative z-10 mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center justify-between px-5 md:px-8 lg:flex" aria-label="Main">
         <a href="#home" className="flex items-center gap-2 font-display text-2xl font-black uppercase tracking-normal">
           <span className="slash bg-primary px-2 text-primary-foreground ring-1 ring-accent">TS</span>
           <span className="border-y-2 border-t-accent border-b-brand-blue">WORKSHOP</span>
@@ -49,12 +52,12 @@ export function Nav() {
         >
           Book / Get a Quote
         </a>
-        <button className="p-2 lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
+        <Button variant="ghost" size="icon" className="h-11 w-11 shrink-0 rounded-none lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
-        </button>
+        </Button>
       </nav>
       {open && (
-        <div className="fixed inset-0 top-0 -z-10 flex flex-col justify-between bg-background px-6 pb-10 pt-28 animate-fade-in lg:hidden">
+        <div className="fixed inset-0 z-0 flex flex-col justify-between gap-6 overflow-y-auto bg-background px-6 pb-20 pt-24 animate-fade-in lg:hidden">
           <ul className="space-y-1">
             {links.map((l, i) => (
               <li key={l.href} className="border-b border-border">
