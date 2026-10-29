@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter, RouterProvider } from "@tanstack/react-router";
 import { cleanup, render, waitFor } from "@testing-library/react";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 
@@ -22,9 +22,18 @@ function renderAt(path: string) {
   return render(<RouterProvider router={router} />);
 }
 
+beforeEach(() => {
+  vi.stubGlobal("IntersectionObserver", class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  });
+});
+
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
+  vi.unstubAllGlobals();
 });
 
 // Assert only that the router mounts and paints, never page content:
