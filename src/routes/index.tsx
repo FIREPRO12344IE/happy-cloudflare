@@ -5,7 +5,7 @@ import { Nav, links } from "@/components/site/Nav";
 import { Gallery } from "@/components/site/Gallery";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { Reveal, SectionLabel, isPlaceholder } from "@/components/site/ui";
-import { about, contact, pricing, reviews, services, social } from "@/content/site";
+import { about, contact, pricing, pricingNote, reviews, services, social } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,8 +47,8 @@ function Index() {
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-32 md:px-8 md:pb-32">
             <div className="mb-6 flex items-center gap-3 animate-fade-in">
               <span className="h-[3px] w-12 bg-primary" />
-              <span className="h-[3px] w-4 bg-accent" />
-              <span className="h-[3px] w-2 bg-brand-blue" />
+              <span className="h-[3px] w-4 bg-brand-blue" />
+              <span className="h-[3px] w-2 bg-accent" />
             </div>
             <h1 className="font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.85] tracking-normal animate-fade-in">
               Motorcycle
@@ -92,7 +92,10 @@ function Index() {
                     <span className="absolute inset-y-0 left-0 w-0 bg-primary transition-all duration-500 group-hover:w-1" />
                     <span className="w-8 pl-3 font-display text-sm font-semibold text-primary md:w-12">{String(i + 1).padStart(2, "0")}</span>
                     <span className="flex-1">
-                      <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">{s.name}</span>
+                      <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">
+                        {s.name}
+                        <span className="ml-3 whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.15em] text-primary md:text-xl">— {s.price}</span>
+                      </span>
                       <span className="mt-1 block text-muted-foreground">{s.desc}</span>
                     </span>
                     <span className="hidden font-display text-xs uppercase tracking-[0.2em] text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 md:block">Get a quote</span>
@@ -127,6 +130,7 @@ function Index() {
                 </Reveal>
               ))}
             </div>
+            <p className="mt-8 max-w-3xl text-sm text-muted-foreground">{pricingNote}</p>
             <a href="#quote" className="group mt-12 inline-flex items-center gap-3 font-display text-2xl font-bold uppercase tracking-[0.15em] text-primary">
               Get a quote <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-2" />
             </a>
