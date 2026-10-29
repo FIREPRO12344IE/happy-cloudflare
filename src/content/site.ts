@@ -27,24 +27,31 @@ export const social = {
 };
 
 export const services = [
-  { name: "Servicing", desc: "Professional motorcycle servicing and maintenance." },
-  { name: "Repairs", desc: "Mechanical repairs and troubleshooting." },
-  { name: "Tyres", desc: "Tyre fitting and related services." },
-  { name: "Electrical", desc: "Electrical diagnostics and repair." },
-  { name: "Engine Work", desc: "Engine-related inspection and repair." },
-  { name: "MOT Prep", desc: "Preparation and checks before an MOT." },
-  { name: "Diagnostics", desc: "Fault finding and motorcycle diagnostics." },
+  { name: "Servicing", price: "From £75", desc: "Routine services, maintenance and safety checks." },
+  { name: "Diagnostics", price: "From £50", desc: "Motorcycle and e-bike diagnostics, fault finding, electrical repairs, running issues, no-start diagnosis, MTV6+ / OBDII scans." },
+  { name: "Repairs", price: "Quote required", desc: "Crash damage, brake, suspension and general mechanical repairs." },
+  { name: "Tyre Fitting", price: "£25 / £30", desc: "Tyre fitting, puncture repairs and wheel balancing." },
+  { name: "MOT Prep", price: "From £25", desc: "Pre-MOT checks, preparation and failure repairs." },
+  { name: "Rebuilds", price: "Quote required", desc: "Top ends, bottom ends, brake calipers/master cylinders, forks, carburettors, fuel taps, gearboxes, clutches, water pumps, oil pumps and starter motors." },
+  { name: "Engine Work", price: "Quote required", desc: "Engine repairs, rebuilds and performance troubleshooting." },
+  { name: "E-Vehicles", price: "Quote required", desc: "EAPCs, conversion kits, mobility scooters and e-scooters; servicing, diagnostics and repairs." },
 ];
 
-// Replace "From £_" with real prices, e.g. "From £120"
+// Real owner-supplied prices — do not change or invent new ones.
 export const pricing = [
-  { name: "Servicing", price: "From £_" },
-  { name: "Diagnostics", price: "From £_" },
-  { name: "Tyres", price: "From £_" },
+  { name: "Servicing", price: "From £75" },
+  { name: "Diagnostics", price: "From £50" },
   { name: "Repairs", price: "Quote required" },
+  { name: "Tyre Fitting", price: "£25 / £30" },
+  { name: "MOT Prep", price: "From £25" },
+  { name: "Rebuilds", price: "Quote required" },
   { name: "Engine Work", price: "Quote required" },
-  { name: "MOT Prep", price: "From £_" },
+  { name: "E-Vehicles", price: "Quote required" },
 ];
+
+// Exact wording supplied by the owner — do not paraphrase.
+export const pricingNote =
+  "Prices shown are approximate guide prices. Parts, motorcycle condition and additional faults may affect the final cost. Engine repairs, complex diagnostics and larger repairs require an individual quotation.";
 
 // Add real photos: set `src` to an image URL. Empty src shows a placeholder.
 export const gallery: { src: string; category: string; caption: string }[] = [
