@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ImagePlus } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { workshopStory } from "@/content/site";
 
@@ -37,23 +37,14 @@ function MoreInfo() {
           <h1 className="font-display text-5xl font-black uppercase leading-none md:text-7xl">TS WORKSHOP</h1>
         </div>
         {workshopStory.map((section, index) => (
-          <section key={section.title} className="grid gap-8 border-b border-border py-12 md:gap-14 md:py-16 lg:grid-cols-12">
-            <div className="lg:col-span-7">
+          <section key={section.title} className="border-b border-border py-12 md:py-16">
+            <div className="max-w-3xl">
               <p className="mb-4 font-display text-sm font-bold text-primary">{String(index + 1).padStart(2, "0")}</p>
               <h2 className="font-display text-4xl font-bold uppercase leading-tight md:text-5xl">{section.title}</h2>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/85 md:text-lg">
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </div>
-            <figure className="self-start lg:col-span-5">
-              <div className="hatch flex aspect-[4/3] items-center justify-center border border-dashed border-border bg-card">
-                <div className="flex flex-col items-center gap-4 text-muted-foreground">
-                  <ImagePlus className="h-9 w-9 text-brand-blue" aria-hidden="true" />
-                  <span className="font-display text-lg font-semibold uppercase">{section.photo}</span>
-                </div>
-              </div>
-              <figcaption className="mt-3 font-display text-sm uppercase text-muted-foreground">{section.title}</figcaption>
-            </figure>
           </section>
         ))}
         <div className="mt-10 flex justify-end">

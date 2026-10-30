@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowUpRight, Ghost, Instagram, MapPin, Phone, Mail, Clock, Quote, Star } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Ghost, Instagram, MapPin, Phone, Mail, Clock, Quote, Star, Facebook } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { Nav, links } from "@/components/site/Nav";
 import { Gallery } from "@/components/site/Gallery";
@@ -95,9 +95,8 @@ function Index() {
                     <span className="min-w-0 flex-1">
                       <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">
                         {s.name}
-                        <span className="mt-2 block whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.15em] text-primary md:ml-3 md:mt-0 md:inline md:text-xl">— {s.price}</span>
                       </span>
-                      <span className="mt-1 block text-muted-foreground">{s.desc}</span>
+                      <span className="mt-2 block text-muted-foreground">{s.desc}</span>
                     </span>
                     <span className="hidden font-display text-xs uppercase tracking-[0.2em] text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 md:block">Get a quote</span>
                     <ArrowUpRight className="h-7 w-7 shrink-0 text-muted-foreground transition-all group-hover:rotate-45 group-hover:text-primary" />
@@ -148,11 +147,6 @@ function Index() {
             <p className="max-w-xs text-muted-foreground">Engine work, repairs, customer bikes and finished work.</p>
           </Reveal>
           <Reveal><Gallery /></Reveal>
-          <div className="mt-10 flex justify-end">
-            <Button asChild className="h-auto max-w-full whitespace-normal rounded-none px-7 py-5 text-center font-display text-lg font-bold uppercase tracking-normal shadow-none">
-              <Link to="/more-info">More info and pictures <ArrowUpRight className="h-5 w-5" /></Link>
-            </Button>
-          </div>
         </section>
 
         {/* WHY */}
@@ -205,6 +199,11 @@ function Index() {
                   ))}
                 </dl>
               )}
+              <div className="mt-10">
+                <Button asChild className="h-auto max-w-full whitespace-normal rounded-none px-7 py-5 text-center font-display text-lg font-bold uppercase tracking-normal shadow-none">
+                  <Link to="/more-info">More info and pictures <ArrowUpRight className="h-5 w-5" /></Link>
+                </Button>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -282,6 +281,11 @@ function Index() {
                   <Ghost className="h-5 w-5" /> Snapchat
                 </a>
               )}
+              {social.facebookUrl && (
+                <a href={social.facebookUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] text-primary-foreground transition-colors hover:border-primary-foreground">
+                  <Facebook className="h-5 w-5" /> Facebook
+                </a>
+              )}
               {!social.instagramUrl && !social.snapchatUrl && (
                 <span className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] opacity-70">
                   <Instagram className="h-5 w-5" /> Profile link coming soon
@@ -351,6 +355,8 @@ function Index() {
               <li>
                 {social.instagramUrl ? (
                   <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="font-display text-sm uppercase tracking-[0.2em] hover:text-primary">Socials</a>
+                ) : social.facebookUrl ? (
+                  <a href={social.facebookUrl} target="_blank" rel="noopener noreferrer" className="font-display text-sm uppercase tracking-[0.2em] hover:text-primary">Facebook</a>
                 ) : social.snapchatUrl ? (
                   <a href={social.snapchatUrl} target="_blank" rel="noopener noreferrer" className="font-display text-sm uppercase tracking-[0.2em] hover:text-primary">Snapchat</a>
                 ) : (

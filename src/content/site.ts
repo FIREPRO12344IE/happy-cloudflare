@@ -34,6 +34,7 @@ export const social = {
   handle: "@tsworkshop",
   instagramUrl: "", // add real profile URL, e.g. "https://instagram.com/..."
   snapchatUrl: "https://www.snapchat.com/add/tsworkshop?share_id=YF-ZRerW-Ww&locale=en-GB",
+  facebookUrl: "https://www.facebook.com/61592042192011", // confirm this is the correct page
 };
 
 export const services = [
