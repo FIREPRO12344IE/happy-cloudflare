@@ -65,11 +65,11 @@ export const gallery: { src: string; category: string; caption: string }[] = [
   { src: work8Img, category: "Diagnostics", caption: "No Start Diagnosis" },
   { src: work9Img, category: "Diagnostics", caption: "iCarsoft MTV6+" },
   { src: work10Img, category: "Customer Bikes", caption: "We Get You Back On The Road In No Time" },
-  { src: work2Img, category: "Repairs", caption: "Clutch Work" },
+  { src: work2Img, category: "Clutch Work", caption: "Clutch Work" },
   { src: work3Img, category: "E-Vehicles", caption: "E-Bike Repairs" },
   { src: work4Img, category: "Rebuilds", caption: "YZF-R Caliper Rebuild" },
   { src: work5Img, category: "Tyres", caption: "Harley Fatbob Tyres" },
-  { src: work1Img, category: "Rebuilds", caption: "Engine Rebuilds" },
+  { src: work1Img, category: "Engine Rebuilds", caption: "Engine Rebuilds" },
   { src: work6Img, category: "Servicing", caption: "Aprilia SXR50 Service" },
   { src: kawasakiNightImg, category: "Finished Work", caption: "Ready for the road" },
 ];
