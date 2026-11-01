@@ -112,7 +112,14 @@
   }
 }
 
-html { scroll-behavior: smooth; }
+/* All text 10% smaller: root size 90%, spacing/containers compensated so layout is unchanged. */
+html { scroll-behavior: smooth; font-size: 90%; }
+:root {
+  --spacing: calc(0.25rem / 0.9);
+  --container-xs: calc(20rem / 0.9); --container-sm: calc(24rem / 0.9); --container-md: calc(28rem / 0.9);
+  --container-lg: calc(32rem / 0.9); --container-xl: calc(36rem / 0.9); --container-2xl: calc(42rem / 0.9);
+  --container-3xl: calc(48rem / 0.9); --container-5xl: calc(64rem / 0.9); --container-7xl: calc(80rem / 0.9);
+}
 body { font-family: var(--font-sans); font-variation-settings: "wght" 450; -webkit-font-smoothing: antialiased; }
 .font-display { font-stretch: condensed; font-variation-settings: "wght" 800; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
