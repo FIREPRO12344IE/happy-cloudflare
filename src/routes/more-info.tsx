@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { workshopStory } from "@/content/site";
@@ -18,6 +19,9 @@ export const Route = createFileRoute("/more-info")({
 });
 
 function MoreInfo() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
