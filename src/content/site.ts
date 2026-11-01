@@ -75,7 +75,7 @@ export const gallery: { src: string; category: string; caption: string }[] = [
 ];
 
 export const about = {
-  story: "TS WORKSHOP is built on one man's drive. A motivated, inspired owner with a dream of making it big — every bike that rolls into the workshop gets that same commitment: honest work, fair prices and a real passion for motorcycles.",
+  story: "TS WORKSHOP was born from a setback that turned into something much bigger. What started with one broken motorcycle, a determination to keep a passion alive, and a dream of building something of my own has grown into an independent workshop built on honest work, fair prices and genuine dedication. Every bike through the doors is another step towards that dream.",
   team: "", // owner / team info
   experience: "",
   qualifications: "",
