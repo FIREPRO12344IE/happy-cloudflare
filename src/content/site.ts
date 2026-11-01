@@ -6,9 +6,6 @@
 
 import engineSwapsImg from "@/assets/engine-swaps.png";
 import engineWorkImg from "@/assets/engine-work.png";
-import ecuBarrelImg from "@/assets/ecu-barrel.png";
-import scooterRepairImg from "@/assets/scooter-repair.png";
-import pitBikeImg from "@/assets/pit-bike.png";
 import kawasakiNightImg from "@/assets/kawasaki-night.png";
 import work7Img from "@/assets/work/work-7.jpeg";
 import work8Img from "@/assets/work/work-8.jpeg";
@@ -78,9 +75,6 @@ export const gallery: { src: string; category: string; caption: string }[] = [
   { src: work6Img, category: "Servicing", caption: "Aprilia SXR50 Service" },
   { src: engineSwapsImg, category: "Engine Work", caption: "Engine swaps & repairs" },
   { src: engineWorkImg, category: "Engine Work", caption: "Engine work 🔧" },
-  { src: ecuBarrelImg, category: "Repairs", caption: "ECU & barrel replacement 💰" },
-  { src: scooterRepairImg, category: "Customer Bikes", caption: "Scooter back on the road" },
-  { src: pitBikeImg, category: "Customer Bikes", caption: "Electric pit bike" },
   { src: kawasakiNightImg, category: "Finished Work", caption: "Ready for the road" },
 ];
 
