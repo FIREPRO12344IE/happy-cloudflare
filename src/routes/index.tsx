@@ -286,6 +286,11 @@ function Index() {
                   <Facebook className="h-5 w-5" /> Facebook
                 </a>
               )}
+              {contact.phone && (
+                <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] text-primary-foreground transition-colors hover:border-primary-foreground">
+                  <Phone className="h-5 w-5" /> {contact.phone}
+                </a>
+              )}
               {!social.instagramUrl && !social.snapchatUrl && (
                 <span className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-5 font-display text-lg font-bold uppercase tracking-[0.15em] opacity-70">
                   <Instagram className="h-5 w-5" /> Profile link coming soon
