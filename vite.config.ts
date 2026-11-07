@@ -7,7 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // Netlify sets NETLIFY=true during its builds; build for Netlify there, Cloudflare everywhere else.
-const onNetlify = process.env.NETLIFY === "true";
+const onNetlify = process.env["NETLIFY"] === "true";
 
 export default defineConfig({
   tanstackStart: {
