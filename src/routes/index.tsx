@@ -51,7 +51,7 @@ function Index() {
               <span className="h-[3px] w-4 bg-brand-blue" />
               <span className="h-[3px] w-2 bg-accent" />
             </div>
-            <h1 className="font-display text-[3.2rem] font-black uppercase leading-[0.9] tracking-normal animate-fade-in sm:text-7xl lg:text-8xl xl:text-[9.5rem]">
+            <h1 className="font-display text-[3.6rem] font-black uppercase leading-[0.9] tracking-normal animate-fade-in sm:text-7xl lg:text-8xl xl:text-[9.5rem]">
               Motorcycle
               <br />
               Repairs <span className="text-primary">&amp;</span>
