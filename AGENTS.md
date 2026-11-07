@@ -13,4 +13,3 @@
 - Quote form uses mailto, no server secrets (why: works on any static/edge host without configuration).
 - Website photos must be real files imported from local assets, never Lovable-only asset URLs (why: images must remain available on standalone Cloudflare deployments).
 - Render the full-screen gallery viewer into document.body via a portal (why: animated section transforms otherwise trap the viewer inside the page layout).
-- Builds target Netlify when NETLIFY=true (vite.config.ts + netlify.toml), Cloudflare otherwise (why: owner deploys to both hosts).
