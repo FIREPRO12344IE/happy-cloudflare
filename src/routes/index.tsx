@@ -63,7 +63,7 @@ function Index() {
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a href="#quote" className="slash group inline-flex items-center justify-center gap-3 bg-primary px-9 py-5 font-display text-lg font-bold uppercase tracking-[0.18em] text-primary-foreground">
-                Get a Quote <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                Get a Quote <ArrowRight className="h-5 w-5 transition-transform" />
               </a>
               <a href="#services" className="inline-flex items-center justify-center border border-foreground/40 px-9 py-5 font-display text-lg font-bold uppercase tracking-[0.18em] transition-colors hover:border-foreground hover:bg-foreground hover:text-background">
                 View Services
@@ -93,13 +93,13 @@ function Index() {
                     <span className="absolute inset-y-0 left-0 w-0 bg-primary transition-all duration-500 group-hover:w-1" />
                     <span className="w-8 pl-3 font-display text-sm font-semibold text-primary md:w-12">{String(i + 1).padStart(2, "0")}</span>
                     <span className="min-w-0 flex-1">
-                      <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 group-hover:translate-x-2 md:text-5xl">
+                      <span className="block font-display text-3xl font-bold uppercase tracking-normal transition-transform duration-300 md:text-5xl">
                         {s.name}
                       </span>
                       <span className="mt-2 block text-muted-foreground">{s.desc}</span>
                     </span>
                     <span className="hidden font-display text-xs uppercase tracking-[0.2em] text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 md:block">Get a quote</span>
-                    <ArrowUpRight className="h-7 w-7 shrink-0 text-muted-foreground transition-all group-hover:rotate-45 group-hover:text-primary" />
+                    <ArrowUpRight className="h-7 w-7 shrink-0 text-muted-foreground transition-all group-hover:text-primary" />
                   </a>
                 </li>
               ))}
@@ -132,7 +132,7 @@ function Index() {
             </div>
             <p className="mt-8 max-w-3xl text-sm text-muted-foreground">{pricingNote}</p>
             <a href="#quote" className="group mt-12 inline-flex items-center gap-3 font-display text-2xl font-bold uppercase tracking-[0.15em] text-primary">
-              Get a quote <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-2" />
+              Get a quote <ArrowRight className="h-6 w-6 transition-transform" />
             </a>
           </div>
         </section>
