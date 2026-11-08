@@ -73,7 +73,7 @@ function Index() {
           <a href="#services" aria-label="Scroll to services" className="absolute bottom-8 right-6 hidden flex-col items-center gap-3 md:flex md:right-10">
             <span className="font-display text-xs uppercase tracking-[0.3em] text-muted-foreground [writing-mode:vertical-rl]">Scroll</span>
             <span className="relative h-14 w-px overflow-hidden bg-border">
-              <span className="absolute inset-x-0 top-0 h-1/2 animate-[scrollline_2s_ease-in-out_infinite] bg-primary" />
+              <span className="absolute inset-x-0 top-0 h-1/2 bg-primary" />
             </span>
           </a>
         </section>
