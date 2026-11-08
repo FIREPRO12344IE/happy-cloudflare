@@ -82,7 +82,7 @@ function Index() {
         <section id="services" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
           <div className="grid gap-10 lg:grid-cols-12">
             <Reveal className="lg:col-span-4">
-              <SectionLabel num="01">Services</SectionLabel>
+              <SectionLabel num="01">What We Do</SectionLabel>
               <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">What<br />we do</h2>
               <p className="mt-6 max-w-sm text-lg text-muted-foreground">Professional motorcycle servicing, repairs and diagnostics.</p>
             </Reveal>
@@ -111,7 +111,7 @@ function Index() {
         <section id="pricing" className="scroll-mt-20 bg-card py-24 md:py-36">
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <Reveal>
-              <SectionLabel num="02">Pricing</SectionLabel>
+              <SectionLabel num="02">Clear Pricing</SectionLabel>
               <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">
                 Clear pricing.<br /><span className="text-accent">No BS.</span>
               </h2>
@@ -149,70 +149,11 @@ function Index() {
           <Reveal><Gallery /></Reveal>
         </section>
 
-        {/* WHY */}
-        <section className="relative overflow-hidden border-y border-border py-24 md:py-36">
-          <div className="pointer-events-none absolute -right-20 top-0 h-full w-1/2 -skew-x-12 bg-card" />
-          <div className="relative mx-auto grid max-w-7xl gap-16 px-5 md:px-8 lg:grid-cols-2">
-            <Reveal>
-              <SectionLabel num="04">Why TS WORKSHOP</SectionLabel>
-              <p className="font-display text-6xl font-black uppercase leading-[0.88] md:text-8xl">
-                Fair prices.<br />Honest work.<br /><span className="text-primary">Fast turnaround.</span>
-              </p>
-            </Reveal>
-            <div className="space-y-0 self-end">
-              {[
-                ["Honest", "Straightforward communication about the work your bike needs."],
-                ["Professional", "Focused on proper motorcycle servicing, repairs and diagnostics."],
-                ["Efficient", "Clear communication and a focus on getting work completed efficiently."],
-              ].map(([t, d], i) => (
-                <Reveal key={t} delay={i * 100} className="border-t border-border py-8">
-                  <div className="flex gap-6">
-                    <span className={`mt-2 h-3 w-3 shrink-0 ${i === 1 ? "bg-accent" : i === 2 ? "bg-brand-blue" : "bg-primary"}`} />
-                    <div>
-                      <h3 className="font-display text-3xl font-bold uppercase">{t}</h3>
-                      <p className="mt-2 text-muted-foreground">{d}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" className="relative mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
-          <div className="absolute inset-x-0 top-0 h-1 bg-accent" />
-          <div className="grid gap-12 lg:grid-cols-12">
-            <Reveal className="lg:col-span-5">
-              <SectionLabel num="05">About</SectionLabel>
-              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">About<br /><span className="text-primary">TS WORKSHOP</span></h2>
-            </Reveal>
-            <Reveal className="lg:col-span-7" delay={100}>
-              <p className={`text-xl leading-relaxed md:text-2xl ${isPlaceholder(about.story) ? "border border-dashed border-border p-6 font-display uppercase tracking-widest text-muted-foreground" : ""}`}>{about.story}</p>
-              {aboutExtras.length > 0 && (
-                <dl className="mt-12 grid gap-8 sm:grid-cols-2">
-                  {aboutExtras.map(([k, v]) => (
-                    <div key={k} className="border-t border-border pt-4">
-                      <dt className="font-display text-sm uppercase tracking-[0.2em] text-primary">{k}</dt>
-                      <dd className="mt-2 text-muted-foreground">{v}</dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
-              <div className="mt-10">
-                <Button asChild className="h-auto max-w-full whitespace-normal rounded-none px-7 py-5 text-center font-display text-lg font-bold uppercase tracking-normal shadow-none">
-                  <Link to="/more-info">More info and pictures <ArrowUpRight className="h-5 w-5" /></Link>
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
         {/* REVIEWS */}
         <section className="bg-card py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <Reveal>
-              <SectionLabel num="06">Reviews</SectionLabel>
+              <SectionLabel num="04">Customer Reviews</SectionLabel>
               <h2 className="font-display text-5xl font-black uppercase leading-[0.9] md:text-7xl">What our<br />customers say</h2>
             </Reveal>
             {reviews.length ? (
@@ -252,7 +193,7 @@ function Index() {
           <div className="absolute inset-x-0 top-0 h-1 bg-accent" />
           <div className="mx-auto grid max-w-7xl gap-16 px-5 md:px-8 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <SectionLabel num="07">Book / Get a Quote</SectionLabel>
+              <SectionLabel num="05">Get a Quote</SectionLabel>
               <h2 className="font-display text-6xl font-black uppercase leading-[0.88] md:text-8xl">Need your bike <span className="text-primary">sorting?</span></h2>
               <p className="mt-6 max-w-md text-lg text-muted-foreground">Tell us what you need and we'll get back to you.</p>
               {phoneOk && (
@@ -260,6 +201,65 @@ function Index() {
               )}
             </Reveal>
             <Reveal className="lg:col-span-7" delay={100}><QuoteForm /></Reveal>
+          </div>
+        </section>
+
+        {/* WHY */}
+        <section className="relative overflow-hidden border-y border-border py-24 md:py-36">
+          <div className="pointer-events-none absolute -right-20 top-0 h-full w-1/2 -skew-x-12 bg-card" />
+          <div className="relative mx-auto grid max-w-7xl gap-16 px-5 md:px-8 lg:grid-cols-2">
+            <Reveal>
+              <SectionLabel num="06">Why TS WORKSHOP</SectionLabel>
+              <p className="font-display text-6xl font-black uppercase leading-[0.88] md:text-8xl">
+                Fair prices.<br />Honest work.<br /><span className="text-primary">Fast turnaround.</span>
+              </p>
+            </Reveal>
+            <div className="space-y-0 self-end">
+              {[
+                ["Honest", "Straightforward communication about the work your bike needs."],
+                ["Professional", "Focused on proper motorcycle servicing, repairs and diagnostics."],
+                ["Efficient", "Clear communication and a focus on getting work completed efficiently."],
+              ].map(([t, d], i) => (
+                <Reveal key={t} delay={i * 100} className="border-t border-border py-8">
+                  <div className="flex gap-6">
+                    <span className={`mt-2 h-3 w-3 shrink-0 ${i === 1 ? "bg-accent" : i === 2 ? "bg-brand-blue" : "bg-primary"}`} />
+                    <div>
+                      <h3 className="font-display text-3xl font-bold uppercase">{t}</h3>
+                      <p className="mt-2 text-muted-foreground">{d}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section id="about" className="relative mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
+          <div className="absolute inset-x-0 top-0 h-1 bg-accent" />
+          <div className="grid gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-5">
+              <SectionLabel num="07">About TS WORKSHOP</SectionLabel>
+              <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">About<br /><span className="text-primary">TS WORKSHOP</span></h2>
+            </Reveal>
+            <Reveal className="lg:col-span-7" delay={100}>
+              <p className={`text-xl leading-relaxed md:text-2xl ${isPlaceholder(about.story) ? "border border-dashed border-border p-6 font-display uppercase tracking-widest text-muted-foreground" : ""}`}>{about.story}</p>
+              {aboutExtras.length > 0 && (
+                <dl className="mt-12 grid gap-8 sm:grid-cols-2">
+                  {aboutExtras.map(([k, v]) => (
+                    <div key={k} className="border-t border-border pt-4">
+                      <dt className="font-display text-sm uppercase tracking-[0.2em] text-primary">{k}</dt>
+                      <dd className="mt-2 text-muted-foreground">{v}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+              <div className="mt-10">
+                <Button asChild className="h-auto max-w-full whitespace-normal rounded-none px-7 py-5 text-center font-display text-lg font-bold uppercase tracking-normal shadow-none">
+                  <Link to="/more-info">More info and pictures <ArrowUpRight className="h-5 w-5" /></Link>
+                </Button>
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -303,7 +303,7 @@ function Index() {
         {/* CONTACT */}
         <section id="contact" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-24 md:px-8 md:py-36">
           <Reveal>
-            <SectionLabel num="08">Contact</SectionLabel>
+            <SectionLabel num="08">Find The Workshop</SectionLabel>
             <h2 className="font-display text-6xl font-black uppercase leading-[0.9] md:text-7xl">Find the workshop</h2>
           </Reveal>
           <div className="mt-14 grid gap-12 lg:grid-cols-2">
