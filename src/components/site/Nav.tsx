@@ -48,7 +48,7 @@ export function Nav() {
         </ul>
         <a
           href="#quote"
-          className="slash hidden bg-primary px-6 py-3 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-transform lg:inline-block"
+          className="slash hidden bg-primary px-6 py-3 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-transform hover:-translate-y-0.5 lg:inline-block"
         >
           Book / Get a Quote
         </a>

@@ -31,7 +31,7 @@ export function Gallery() {
     return (
       <Button variant="ghost" onClick={() => setIdx(i)} className={`group relative block h-auto overflow-hidden rounded-none bg-card p-0 text-left hover:bg-card ${className}`} aria-label={`Open ${g.caption}`}>
         {g.src ? (
-          <img src={g.src} alt={g.caption} loading="lazy" className="h-full w-full object-cover transition-transform duration-700" />
+          <img src={g.src} alt={g.caption} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         ) : (
           <div className="hatch flex h-full w-full flex-col items-center justify-center gap-2 border border-dashed border-border p-4 text-center text-muted-foreground">
             <ImagePlus className="h-7 w-7" />
