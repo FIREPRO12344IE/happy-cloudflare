@@ -74,7 +74,7 @@ export function QuoteForm() {
 
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row">
         <button type="submit" className="group flex flex-1 items-center justify-center gap-3 bg-primary py-5 font-display text-lg font-bold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-foreground">
-          Send Enquiry <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          Send Enquiry <ArrowRight className="h-5 w-5 transition-transform" />
         </button>
         {social.instagramUrl ? (
           <a href={social.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-foreground/30 px-6 py-5 font-display font-bold uppercase tracking-[0.15em] hover:border-primary hover:text-primary">
